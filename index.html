@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sets Game v1.0</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Link Bootstrap.css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- Add jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Add Bootstrap.js -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Add React.js into the project -->
+		<!-- DEV -->
+		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+		<!-- MINIFIED -->
+		<!--<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>-->
+		<!--<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>-->
+
+	<!-- Link JS Source Files -->
+	<script src="dependencies/combinations.js"></script>
+	<script src="dependencies/StringBuffer.js"></script>
+	<script src="dependencies/helpers.js"></script>
+	<!-- First, link the stuffs with the game logic -->
+	<script src="game_logic/Card.js"></script>
+	<script src="game_logic/Deck.js"></script>
+	<script src="game_logic/VisibleCards.js"></script>
+	<script src="game_logic/ActionController.js"></script>
+	<!-- Now, link the ReactComponents -->
+	<script src="react_game_components/REACTCard.js"></script>
+	<script src="react_game_components/REACTRow.js"></script>
+	<script src="react_game_components/REACTGrid.js"></script>
+	<script src="react_game_components/REACTPointBoard.js"></script>
+	<script src="react_game_components/REACTGame.js"></script>
+	<!-- Link the other dependencies: These are helpers -->
+	<script src="other_dependencies/REACTPoppup.js"></script>
+	<!-- Link the main script to get the game started -->
+	<script src="scripts.js"></script>
+
+	<!-- during testing / building only -->
+	<script src="__tests/unit.js"></script>
+</head>
+<body>
+	<div id="modal">
+		<div id="modal-init"></div>
+	</div>
+	<header id="header"> SETS <span id="play-header-button" onclick="Game()">Play</span></header>
+	<div id="header-separator"></div>
+	<div id="game-init">
+		<div id="credit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 t-emph">
+			Do you know the rules? Here's a <a href=https://www.setgame.com/sites/default/files/instructions/SET%20INSTRUCTIONS%20-%20ENGLISH.pdf" class="link">link</a>.
+			<br>
+			<br>
+			By <a class="link" href="https://github.com/robertvunabandi">Robert M. Vunabandi</a>. Inspired from <a class="link" href="http://www.setgame.com/set">Sets</a>.
+			<br>
+			<br>
+			. . .
+			<br>
+			<br>
+			This game is currently under development and thus is extremely buggy.However, feedback would be useful to make this game better. You can help by answering this <a class="link" href="https://goo.gl/forms/B9CGzDC2eiQjQLmJ2" target="_blank">survey</a> .
+		</div>
+	</div>
+	<!-- TODO: Make a warning that this game is not mobile friendly. -->
+	<!-- TODO: Set a max length on the username -->
+	<!-- TODO: Add an "about this" page or modal? -->
+</body>
+</html>

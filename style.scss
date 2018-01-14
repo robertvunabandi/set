@@ -1,0 +1,301 @@
+// get colors from material android
+
+$color-red: rgba(247, 57, 0, 1);
+$color-violet: rgba(113, 30, 189, 1);
+$color-green: rgba(7, 192, 56, 1);
+
+$primary: #0fb35d; // TODO - CHANGE
+$primary-light: #16e97b; // TODO - CHANGE
+$secondary: #ff6f1a; // TODO - CHANGE
+$ternary: #ffd60a; // TODO - CHANGE
+
+$highlight: #ffcb6a;
+$highlight-oa: rgba(255, 203, 106, 0.1);
+$highlight-ob: rgba(255, 203, 106, 0.3);
+$highlight-oc: rgba(255, 203, 106, 0.5);
+
+$wrong: #ff3535;
+$wrong-oa: rgba(255, 53, 53, 0.1);
+$wrong-ob: rgba(255, 53, 53, 0.3);
+$wrong-oc: rgba(255, 53, 53, 0.5);
+
+$right: #16e97b;
+$right-oa: rgba(22, 233, 123, 0.1);
+$right-ob: rgba(22, 233, 123, 0.3);
+$right-oc: rgba(22, 233, 123, 0.5);
+
+$timeout: #6187ff;
+$timeout-oa: rgba(97, 135, 255, 0.1);
+$timeout-ob: rgba(97, 135, 255, 0.3);
+$timeout-oc: rgba(97, 135, 255, 0.5);
+
+$dark-color: #202020;
+$light-color: #f9f9f9;
+
+$l-shadow-oa: rgba(0, 0, 0, 0.1);
+$l-shadow-ob: rgba(0, 0, 0, 0.25);
+$l-shadow-oc: rgba(0, 0, 0, 0.4);
+$l-shadow-od: rgba(0, 0, 0, 0.55);
+$l-shadow-oe: rgba(0, 0, 0, 0.17);
+
+$l-shadow-white-oa: rgba(255, 255, 255, 0.1);
+$l-shadow-white-ob: rgba(255, 255, 255, 0.25);
+$l-shadow-white-oc: rgba(255, 255, 255, 0.4);
+$l-shadow-white-od: rgba(255, 255, 255, 0.55);
+$l-shadow-white-oe: rgba(255, 255, 255, 0.17);
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 900;
+	transition: all 200ms;
+}
+
+body {
+	#header {
+		vertical-align: middle;
+		cursor: default !important;
+		padding-left: 8%;
+		font-size: 3.5rem;
+		color: $dark-color;
+		font-weight: 800;
+		background-color: rgba(247, 57, 0, 0.4);
+		#play-header-button {
+			color: white;
+			font-size: 3.5rem;
+			border: 0rem solid $color-red;
+			background-color: rgba(0, 0, 0, 0);
+		}
+	}
+
+	#header-separator {
+		min-height: 0.3rem;
+		background-color: black;
+		min-width: 100% !important;
+	}
+}
+
+#game-init {
+	max-height: 10rem;
+}
+
+/* Styles for the Overall game */
+.sets-game {
+	min-width: 100%;
+	max-width: 100%;
+}
+
+/* Styles for the React Point Board */
+
+.point-board {
+	color: white;
+	background-color: black;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 5rem;
+	// Leave some space before the cards with this next line
+	margin-bottom: 1.75rem;
+	.pb-userblock {
+		.pb-username {
+			display: block;
+			font-size: 2rem;
+			font-weight: 900;
+		}
+		.pb-points {
+			padding-left: 2rem;
+			display: block;
+			font-size: 2.5rem;
+			font-weight: 300;
+			#pb-points {
+				font-weight: 300;
+				margin-right: 1rem;
+			}
+		}
+	}
+
+	.pb-timerblock {
+		font-weight: 300;
+		font-size: 4rem;
+		#pb-time-left {
+			font-weight: 900 !important;
+			font-size: 4rem;
+		}
+	}
+}
+
+/* Style for the grid */
+
+.card-grid {
+}
+
+/* Styles for cards */
+$card-width: 17rem;
+
+.card-row {
+	text-align: center;
+}
+
+.card {
+	cursor: pointer !important;
+	display: inline-block;
+	text-align: center;
+	min-width: $card-width;
+	max-width: $card-width;
+	margin: 0.5rem;
+	border: 0.25rem solid rgba(0, 0, 0, 0.05);
+	border-radius: 1rem;
+	box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.3), 0 0 0.75rem rgba(0, 0, 0, 0.1), 0 0 0.9rem rgba(0, 0, 0, 0.1);
+	transition: box-shadow 150ms, border 150ms !important;
+
+	.symbol, svg {
+		display: inline-block;
+		min-width: 5.0rem;
+		max-width: 5.0rem;
+	}
+}
+
+.card-nulled {
+	border: none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+}
+
+.card:hover {
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1), 0 0 0.75rem rgba(0, 0, 0, 0.2), 0 0 1.9rem rgba(0, 0, 0, 0.5);
+}
+
+.card-highligted {
+	border: 0.25rem solid $highlight !important;
+	box-shadow: 0 0 0.5rem $highlight-oa, 0rem 0rem 0.75rem $highlight-ob, 0rem 0rem 1.9rem $highlight-oc !important;
+}
+
+.card-highligted-wrong {
+	border: 0.25rem solid $wrong !important;
+	box-shadow: 0 0 0.5rem $wrong-oa, 0rem 0rem 0.75rem $wrong-ob, 0rem 0rem 1.9rem $wrong-oc !important;
+}
+
+.card-highligted-right {
+	border: 0.25rem solid $right !important;
+	box-shadow: 0 0 0.5rem $right-oa, 0rem 0rem 0.75rem $right-ob, 0rem 0rem 1.9rem $right-oc !important;
+}
+
+.card-highligted-timout {
+	border: 0.25rem solid $timeout !important;
+	box-shadow: 0 0 0.5rem $timeout-oa, 0rem 0rem 0.75rem $timeout-ob, 0rem 0rem 1.9rem $timeout-oc !important;
+}
+
+/* Styles for cards: Things specifically to get around React.js ??? What did I mean by that? */
+
+/* 0xx for red */
+/* 1xx for violet */
+/* 2xx for green */
+/* o stands for outline */
+/* i stands for interior */
+.svg000, .svg001-o, .svg010, .svg011-o, .svg020, .svg021-o {
+	fill: none;
+	stroke: $color-red;
+	stroke-miterlimit: 10;
+}
+.svg100, .svg101-o, .svg110, .svg111-o, .svg120, .svg121-o {
+	fill: none;
+	stroke: $color-violet;
+	stroke-miterlimit: 10;
+}
+.svg200, .svg201-o, .svg210, .svg211-o, .svg220, .svg221-o {
+	fill: none;
+	stroke: $color-green;
+	stroke-miterlimit: 10;
+}
+.svg001-i, .svg011-i, .svg021-i {
+	fill: $color-red;
+}
+.svg101-i, .svg111-i, .svg121-i {
+	fill: $color-violet;
+}
+.svg201-i, .svg211-i, .svg221-i {
+	fill: $color-green;
+}
+.svg002, .svg012, .svg022 {
+	fill: $color-red;
+	stroke: $color-red;
+	stroke-miterlimit: 10;
+}
+.svg102, .svg112, .svg122 {
+	fill: $color-violet;
+	stroke: $color-violet;
+	stroke-miterlimit: 10;
+}
+.svg202, .svg212, .svg222 {
+	fill: $color-green;
+	stroke: $color-green;
+	stroke-miterlimit: 10;
+}
+
+/* Styles for rendering the modal */
+#modal {
+	// This modal needs to be above everyone
+	position: fixed;
+	z-index: 1000;
+	min-width: 100%;
+	height: 100%;
+	min-height: 100%;
+	background-color: $l-shadow-od;
+
+	#modal-init {
+		margin: 10rem 15rem;
+		padding: 5rem;
+		background-color: white;
+		box-shadow: 0 0 1rem $l-shadow-oe;
+
+		h1 {
+			margin-top: 0;
+			padding-top: 0;
+		}
+	}
+}
+
+#modal[visible=true] {
+	display: block;
+}
+
+#modal[visible=false] {
+	display: none;
+}
+
+/* Styles for the credit */
+#credit {
+	padding: 2rem;
+	margin-top: 1rem;
+	min-width: 100%;
+	font-weight: 300;
+	color: rgba(75,75,75,1);
+	text-align: center;
+	font-style: italic;
+	font-size: 1.5rem;
+	.link, .link:visited {
+		color: rgba(75,75,75,1);
+		padding-left: 0.5rem; padding-right: 0.5rem;
+		padding-top: 0.25rem; padding-bottom: 0.25rem;
+		font-weight: 500;
+		background-color: rgba(7, 192, 56, 0.065);
+		transition: font 200ms, font-weight 200ms;
+	}
+	.link:hover {
+		font-weight: 800;
+		text-decoration: none;
+	}
+	.link:active, .link:focus {
+		color: $color-violet;
+	}
+}
+
+/* This could have been done more efficiently... */
+
+.noselect {
+	/* Taken from: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting-using-css */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
