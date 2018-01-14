@@ -14,6 +14,7 @@ class ReactModalOverrideGame extends React.Component {
 				React.createElement('input', {
 					type: "button",
 					value: "Cancel",
+					className: "cancel-btn",
 					onClick: function() {
 						self.props.cancelHandler();
 					},
@@ -21,6 +22,7 @@ class ReactModalOverrideGame extends React.Component {
 				React.createElement('input', {
 					type: "button",
 					value: "Yes I'm Sure",
+					className: "submit-btn",
 					onClick: function() {
 						// set the user name and max times
 						// use default values if any of them are invalid
@@ -97,6 +99,7 @@ class ReactModalStartNewGame extends React.Component {
 				React.createElement('input', {
 					type: "button",
 					value: "Cancel",
+					className: "cancel-btn",
 					onClick: function() {
 						self.props.cancelHandler();
 						},
@@ -104,6 +107,7 @@ class ReactModalStartNewGame extends React.Component {
 				React.createElement('input', {
 					type: "button",
 					value: "Start",
+					className: "submit-btn",
 					onClick: function() {
 						// set the user name and max times
 						// use default values if any of them are invalid

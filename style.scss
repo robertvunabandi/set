@@ -36,7 +36,7 @@ $l-shadow-oa: rgba(0, 0, 0, 0.1);
 $l-shadow-ob: rgba(0, 0, 0, 0.25);
 $l-shadow-oc: rgba(0, 0, 0, 0.4);
 $l-shadow-od: rgba(0, 0, 0, 0.55);
-$l-shadow-oe: rgba(0, 0, 0, 0.17);
+$l-shadow-oe: rgba(0, 0, 0, 0.7);
 
 $l-shadow-white-oa: rgba(255, 255, 255, 0.1);
 $l-shadow-white-ob: rgba(255, 255, 255, 0.25);
@@ -249,6 +249,46 @@ $card-width: 17rem;
 		h1 {
 			margin-top: 0;
 			padding-top: 0;
+			font-weight: 900;
+		}
+
+		input:focus {
+			outline: 0;
+		}
+
+		input {
+			font-size: 1.5rem;
+			padding: 0.25rem;
+			margin: 0.25rem;
+		}
+
+		input[type=text], input[type=number] {
+			border: none;
+			border-bottom: 2px solid $l-shadow-oc;
+		}
+
+		input[type=text]:focus, input[type=number]:focus {
+			border-bottom: 2px solid $highlight-oc;
+		}
+
+		input[type=button] {
+			margin-top: 2rem;
+			font-size: 1.75rem;
+			border-radius: 0.25rem;
+			padding: 0.75rem 1.25rem;
+			border: none;
+			box-shadow: 0 0 0.5rem $l-shadow-ob;
+		}
+
+		input[type=button] + input[type=button] {
+			margin-left: 0.5rem;
+		}
+
+		.cancel-btn {
+			background-color: $secondary;
+		}
+		.submit-btn {
+			background-color: $primary-light;
 		}
 	}
 }

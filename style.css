@@ -158,10 +158,35 @@ body #header-separator {
     margin: 10rem 15rem;
     padding: 5rem;
     background-color: white;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.17); }
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7); }
     #modal #modal-init h1 {
       margin-top: 0;
-      padding-top: 0; }
+      padding-top: 0;
+      font-weight: 900; }
+    #modal #modal-init input:focus {
+      outline: 0; }
+    #modal #modal-init input {
+      font-size: 1.5rem;
+      padding: 0.25rem;
+      margin: 0.25rem; }
+    #modal #modal-init input[type=text], #modal #modal-init input[type=number] {
+      border: none;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.4); }
+    #modal #modal-init input[type=text]:focus, #modal #modal-init input[type=number]:focus {
+      border-bottom: 2px solid rgba(255, 203, 106, 0.5); }
+    #modal #modal-init input[type=button] {
+      margin-top: 2rem;
+      font-size: 1.75rem;
+      border-radius: 0.25rem;
+      padding: 0.75rem 1.25rem;
+      border: none;
+      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25); }
+    #modal #modal-init input[type=button] + input[type=button] {
+      margin-left: 0.5rem; }
+    #modal #modal-init .cancel-btn {
+      background-color: #ff6f1a; }
+    #modal #modal-init .submit-btn {
+      background-color: #16e97b; }
 
 #modal[visible=true] {
   display: block; }
