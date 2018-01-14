@@ -185,7 +185,7 @@ class SETSReactPointBoard extends React.Component {
 	the player. This should be a function of how
 	difficult he chose his game to be. */
 	__getPointsFromTime() {
-		// TODO - Implement very carefully! This is the SAUCE of the game!!!
+		// TODO - Implement very carefully! This is the most important part.
 		let self  = this;
 
 		// We just return the time_left for now. It's in ms, so we divide my 100.

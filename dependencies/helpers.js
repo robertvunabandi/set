@@ -18,7 +18,7 @@ SETS.HLP.editableCardWidth = 170;
 // the user name of the user will be saved in the
 // following variable
 SETS.HLP.userName = "Anonymous";
-SETS.HLP.userMaxTime = 40000; // TODO - set this to 40000
+SETS.HLP.userMaxTime = 40000;
 
 // See REACTCard.js for the meaning of these
 SETS.HLP.cardActions = {
@@ -194,7 +194,6 @@ SETS.HLP.RANDOMSTATE.REACTRow = function () {
 };
 
 SETS.HLP.createCreditReactElement = function() {
-	// TODO - create google survey link
 	let warning_text = "", google_survey_link = "https://goo.gl/forms/B9CGzDC2eiQjQLmJ2";
 	warning_text += "This game is currently under development and thus is extremely buggy. ";
 	warning_text += "However, feedback would be useful to make this game better. ";
